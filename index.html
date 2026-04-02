@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Short Game | The Neon Arena</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0e0e0e;
+        }
+        .headline-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar hide for the category row */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#83e881",
+              "on-primary": "#650000",
+              "tertiary-container": "#91f78e",
+              "on-surface": "#ffffff",
+              "surface-bright": "#2c2c2c",
+              "outline": "#767575",
+              "surface-container-low": "#131313",
+              "secondary-container": "#0061a4",
+              "primary-fixed-dim": "#ff5b47",
+              "on-primary-container": "#4f0000",
+              "on-primary-fixed": "#000000",
+              "on-error": "#490013",
+              "on-tertiary-container": "#005e17",
+              "outline-variant": "#484847",
+              "background": "#0e0e0e",
+              "tertiary-fixed": "#91f78e",
+              "on-secondary-fixed": "#00365e",
+              "secondary-dim": "#3aa2ff",
+              "error-container": "#a70138",
+              "surface-container-high": "#20201f",
+              "on-secondary-container": "#f5f8ff",
+              "surface-container-lowest": "#000000",
+              "surface-variant": "#262626",
+              "inverse-on-surface": "#565555",
+              "primary": "#ff8e7d",
+              "tertiary": "#bbffb3",
+              "surface-tint": "#ff8e7d",
+              "surface-container": "#1a1a1a",
+              "on-surface-variant": "#adaaaa",
+              "on-secondary": "#00213d",
+              "secondary": "#3aa2ff",
+              "inverse-surface": "#fcf9f8",
+              "inverse-primary": "#c10100",
+              "primary-dim": "#eb0000",
+              "error": "#ff6e84",
+              "on-error-container": "#ffb2b9",
+              "on-tertiary-fixed-variant": "#00691a",
+              "secondary-fixed": "#b3d4ff",
+              "on-tertiary": "#00671a",
+              "surface": "#0e0e0e",
+              "surface-dim": "#0e0e0e",
+              "on-secondary-fixed-variant": "#00538d",
+              "surface-container-highest": "#262626",
+              "primary-fixed": "#ff7763",
+              "on-tertiary-fixed": "#00480f",
+              "error-dim": "#d73357",
+              "tertiary-dim": "#83e881",
+              "secondary-fixed-dim": "#99c7ff",
+              "primary-container": "#ff7763",
+              "on-primary-fixed-variant": "#600000",
+              "on-background": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-neutral-900/60 backdrop-blur-md flex justify-between items-center px-4 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-500" data-icon="sports_esports">sports_esports</span>
+<h1 class="text-2xl font-bold tracking-tighter text-rose-500 headline-font">Short Game</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-neutral-800/50 p-2 rounded-full transition-transform scale-95 duration-200">
+<span class="material-symbols-outlined text-neutral-400" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="pt-20 px-4 space-y-8">
+<!-- Category Buttons: Horizontal Scroll -->
+<section class="mt-4">
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+<!-- Quick Play - Red -->
+<button class="flex-shrink-0 px-5 py-2.5 rounded-full bg-inverse-primary text-white font-bold text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+                    Quick Play
+                </button>
+<!-- Puzzle - Orange -->
+<button class="flex-shrink-0 px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-bold text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+                    Puzzle
+                </button>
+<!-- Arcade - Green -->
+<button class="flex-shrink-0 px-5 py-2.5 rounded-full bg-tertiary-container text-on-tertiary-container font-bold text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+                    Arcade
+                </button>
+<!-- Idle - Teal -->
+<button class="flex-shrink-0 px-5 py-2.5 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed font-bold text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+                    Idle
+                </button>
+<!-- Clicker - Blue -->
+<button class="flex-shrink-0 px-5 py-2.5 rounded-full bg-secondary-container text-white font-bold text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+                    Clicker
+                </button>
+</div>
+</section>
+<!-- Top Ad Banner -->
+<section class="relative group">
+<div class="w-full aspect-[21/9] rounded-xl overflow-hidden border-2 border-inverse-primary bg-surface-container-low flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105" data-alt="cinematic widescreen shot of a futuristic neon city street at night with glowing red highlights and sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoyydS9-secYar5ssJF8jXHcnovKcI9TMWWsGSdMVDbaQltKyzf4xOav8vFL5gjcND7IYDa0LikD5NofLz9GhR5BRM_mTVaxaLCeibLuVb2RlHK1xUf8DvtHZgxVOC0AHn1BNl17k5Du4mGuTbb0RZaGuYaXnfOZYBkYWh-okbWKjeVJ0GhSanpEa1cey2AydEZPGgQf_gcAQ2-mA7KTQtWac4el2PQ0plv7_QkMJ8EcsXNU-8sr7gnJXqsJD9b47icJKop_BSbhU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+<span class="inline-block px-2 py-0.5 bg-inverse-primary text-[10px] font-bold tracking-widest text-white rounded mb-2 w-fit">AD</span>
+<h3 class="headline-font text-xl font-bold text-white uppercase tracking-tight leading-none">Experience Chaos</h3>
+</div>
+</div>
+</section>
+<!-- Top Pick For You -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<span class="text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">Recommended</span>
+<h2 class="headline-font text-3xl font-bold tracking-tighter">Top pick for you</h2>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<!-- 2x3 Bento Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Main Featured Card (Castle/Strategy) -->
+<div class="col-span-1 row-span-1 relative rounded-xl overflow-hidden bg-surface-container-highest aspect-[3/4] group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="epic medieval fantasy castle perched on a rocky cliff with dramatic cinematic lighting and dark storm clouds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcrDBL92n_0Mu1KtcIg5HX_bwzgmP5243f8Ec7WwgTkFHyBhyeEoChxhEv6Fvju_7Qnjx2h0gwvCxhwvrrtrecqR0EUXBKrU-Cv4W3hF4PWp74D2S0k37fdTGMemRmLE4Sa8GatSBo3MCV1bN1-tjSLS026U17mj8ujreLdPLdmRI4P0REyaY0pI2QT2D4KcKeyYrIz03nRnLhV8V7FFxPpoLE2k3IFRaLkpeqopgqag0On6sRt8S3DP5ZqZt_Go-CaVldJZthtRw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-3 flex flex-col justify-end">
+<span class="text-xs font-bold text-rose-400 mb-1">Strategy</span>
+<h4 class="text-sm font-bold leading-tight">Kingdom Fall</h4>
+</div>
+<div class="absolute top-2 left-2 w-6 h-6 rounded-full bg-error flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[14px] text-on-error font-bold" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<!-- Secondary Card -->
+<div class="col-span-1 row-span-1 relative rounded-xl overflow-hidden bg-surface-container-highest aspect-[3/4] group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="pixel art style spaceship flying through a colorful nebula with neon lasers and explosions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkyQs-MtOVlRjG-8Pn4sglE4JsxEQRrJ0XgtOqydgjYn8QGgbRyEM_7ShzqV6AINqNQq30U50HhQ3QTpksG28UJaLSKSUC0fYnepz5OBNv6IGo23u-KuidA7Md3M01k_c5eko_N3X3EOLY2u3wYX3vj2lPo8fD9W2OjuE-A126Bl4PqB8GdE0FHTKI1OwVPAPQ79k4evwSx-GLuIZWtJwB0zfIcjBtsCN_s_lTwj2WFzfCUuhOPZb1KOWUFE273DSP97Y0FSUJB7U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-3 flex flex-col justify-end">
+<span class="text-xs font-bold text-secondary mb-1">Arcade</span>
+<h4 class="text-sm font-bold leading-tight">Retro Raider</h4>
+</div>
+</div>
+<!-- Third Card -->
+<div class="col-span-1 row-span-1 relative rounded-xl overflow-hidden bg-surface-container-highest aspect-[3/4] group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="extreme close up of glowing neon circuit patterns in a dark computer hardware setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKUG9yeumh2HTBp8TOLWhN8287jjEHrPmCte8Q3FjDV6Jp1TSRRXlZ6MdzwVpZfepG3Dag9cjgJDNZDaHBceN4zAsnu7N7cK1EDSwLC6_vGmQKMcMY633N_srUkL-xbNAu0-Wkqj9R9d6hxdRy404BWYl7xcGYRRVrMZZOr_hYl34oDdVtOP5plIY1AiV0Ni9_Z95_DEjpH7vxKTbAdlDVKzgPW03xqr1_FJbR9wpuZwPSHu6Xw2BJ2YcY2ELr49rkZADC0jcRUqY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-3 flex flex-col justify-end">
+<span class="text-xs font-bold text-tertiary mb-1">Puzzle</span>
+<h4 class="text-sm font-bold leading-tight">Neon Logic</h4>
+</div>
+</div>
+<!-- Fourth Card -->
+<div class="col-span-1 row-span-1 relative rounded-xl overflow-hidden bg-surface-container-highest aspect-[3/4] group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="high contrast shot of a stylized samurai character standing in heavy rain with red neon backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw9903wpV4rL5_4WELcXGTEGA4QuJybxAcKRo84Q4fzk1xVHmwTh3uPxKqh_Tnj-rvTi6W80pzZTV5G7hl6k4NsTnW5gIM1ZuCOl8vy5N0HdHKNIYLwFMsnlUFBpF6zdLZOXUauQ57bQSqvmG40tN3vxucKjHwNw4LkHYzgm6AbXa5D2T7Uj3MvJibBWAhpB_M2eXAwMX4Q_AsIdKDtA2e7sbqJkFiRFJHBfM9anZbPUC8SY9DDQGvK0Jhu3DiNVTSjmvOWB6XFaA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-3 flex flex-col justify-end">
+<span class="text-xs font-bold text-rose-400 mb-1">Action</span>
+<h4 class="text-sm font-bold leading-tight">Rain blade</h4>
+</div>
+</div>
+<!-- Fifth Card -->
+<div class="col-span-1 row-span-1 relative rounded-xl overflow-hidden bg-surface-container-highest aspect-[3/4] group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="vibrant 3d isometric scene of a stylized fantasy forest with bioluminescent plants and magical creatures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoifigOb9-T12PNxMBM_UWnVkwQcrY8fZmisaEK_1UQsbSqbnPQ3F056OMwgGqTwkdKuPvIqskuUw3f9glmtNc1TlSqBGEn19xxSz42TKQ7lJK1fXfRA4wG_S03ysN-emBtfiQ2zCBf_O1H8pVZLA0RGjq_syBiHyu8-D3e_jZaSOArJKxvimgaVCeMegr5i-7CaKKFtK6oYCwTA1prIPWKO8fmX4jRTkckfdfT5laGEwIuRfpTMiZskymFSGPuTcDze8Yv2cwYE0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-3 flex flex-col justify-end">
+<span class="text-xs font-bold text-tertiary mb-1">Idle</span>
+<h4 class="text-sm font-bold leading-tight">Spirit Grove</h4>
+</div>
+</div>
+<!-- Sixth Card -->
+<div class="col-span-1 row-span-1 relative rounded-xl overflow-hidden bg-surface-container-highest aspect-[3/4] group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="blurred motion shot of a sleek sports car racing through a futuristic city at high speed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYxUJLXFg4xciqY_5CVQ0vKHaQBbhmEusmY61l8yj4w86bo0iD1YdW-gXNmlORmURL8OPlNkHA9IZGDucJUueoQPBfnOy6MxdkWNSG241zpIzdq3OcU-aom6ewOVVikSuNE3ws2IE-qKkn1-CtIFTukiN-QL_fX4jDLGZ3ouL2oH_d_Hk_sAvLsqIz1SJ_fvUVGsyjww3RtQHr-bL5hxxgiWAwy9eiOWN8uL-Q4Cy_cUYlb-eLWqdOOzZ6HRuVvsB1o0f6tEtAB7U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent p-3 flex flex-col justify-end">
+<span class="text-xs font-bold text-secondary mb-1">Racing</span>
+<h4 class="text-sm font-bold leading-tight">Velocity X</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Ad Banner -->
+<section class="pb-8">
+<div class="w-full p-4 rounded-xl border-2 border-inverse-primary bg-surface-container-low flex items-center justify-between gap-4">
+<div class="flex-1">
+<span class="inline-block px-2 py-0.5 bg-inverse-primary text-[10px] font-bold tracking-widest text-white rounded mb-2">LIVE PROMO</span>
+<h3 class="headline-font text-lg font-bold text-white uppercase tracking-tight">Level Up Faster</h3>
+<p class="text-xs text-on-surface-variant">Get 2x rewards on all puzzle games this weekend only.</p>
+</div>
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="abstract explosion of golden coins and sparkling gems on a deep red background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHwMk_-t9O39BRt4cKQ2MSt37HmFyIc12dVohH6mVFqOTMQ8F2cOfT3e5cx6LIXUsQDg0eIkPgOYCc17XvH2BTBXwh8XHOVWBpq2DVMMtoqbxu5Ok1YAhDb5WTieE0_1sSem2ZbxhKbOangZUDUEJJJvo3VVFthxs6NcxqCGQQu_mHMsTyLal9pJulKwRxyEOurdG_oWQuymFey1zpDuS1TLNJaoGEEHbDKoDW40MUuF3mk7OEal9EpGRIPOQc0ZpsTm8pFv4UOKQ"/>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center h-16 pb-safe bg-neutral-900/60 backdrop-blur-md shadow-[0_-10px_40px_rgba(0,0,0,0.6)]">
+<button class="flex flex-col items-center justify-center text-rose-400 font-bold scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-inter text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-neutral-500 hover:text-rose-300">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-inter text-[10px] font-medium">Categories</span>
+</button>
+<button class="flex flex-col items-center justify-center text-neutral-500 hover:text-rose-300">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+</body></html>
