@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#0e0e0e",
+              "primary-fixed-dim": "#ff5b47",
+              "on-secondary": "#00213d",
+              "secondary-fixed-dim": "#99c7ff",
+              "tertiary-fixed-dim": "#83e881",
+              "surface-container-lowest": "#000000",
+              "surface-container-highest": "#262626",
+              "surface-dim": "#0e0e0e",
+              "on-tertiary": "#00671a",
+              "inverse-on-surface": "#565555",
+              "secondary-container": "#0061a4",
+              "on-tertiary-fixed": "#00480f",
+              "outline": "#767575",
+              "tertiary-dim": "#83e881",
+              "on-primary": "#650000",
+              "error-container": "#a70138",
+              "on-error-container": "#ffb2b9",
+              "secondary": "#3aa2ff",
+              "on-tertiary-fixed-variant": "#00691a",
+              "secondary-fixed": "#b3d4ff",
+              "on-tertiary-container": "#005e17",
+              "tertiary-fixed": "#91f78e",
+              "on-secondary-container": "#f5f8ff",
+              "on-primary-fixed": "#000000",
+              "surface-container-high": "#20201f",
+              "on-surface-variant": "#adaaaa",
+              "error-dim": "#d73357",
+              "on-primary-container": "#4f0000",
+              "primary": "#ff8e7d",
+              "on-secondary-fixed": "#00365e",
+              "outline-variant": "#484847",
+              "tertiary": "#bbffb3",
+              "error": "#ff6e84",
+              "secondary-dim": "#3aa2ff",
+              "on-background": "#ffffff",
+              "tertiary-container": "#91f78e",
+              "surface-container-low": "#131313",
+              "inverse-surface": "#fcf9f8",
+              "on-surface": "#ffffff",
+              "surface-variant": "#262626",
+              "primary-dim": "#eb0000",
+              "on-secondary-fixed-variant": "#00538d",
+              "surface-tint": "#ff8e7d",
+              "primary-fixed": "#ff7763",
+              "on-error": "#490013",
+              "surface-container": "#1a1a1a",
+              "inverse-primary": "#c10100",
+              "surface": "#0e0e0e",
+              "primary-container": "#ff7763",
+              "surface-bright": "#2c2c2c",
+              "on-primary-fixed-variant": "#600000"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .neon-glow-primary {
+        box-shadow: 0 0 15px rgba(255, 142, 125, 0.4);
+      }
+      .neon-glow-red {
+        box-shadow: 0 0 20px rgba(193, 1, 0, 0.5);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="bg-[#0e0e0e]/60 backdrop-blur-md fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#ff8e7d] cursor-pointer" data-icon="menu">menu</span>
+<div class="flex items-center gap-2">
+<img alt="Donkey Games Logo" class="w-8 h-8 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uipqgiGY2NSNXYdh96tnggLhLQx3ASKOQJr_nIApiWrMi2GLBMnWEKFs0-LeOYZjFHn7R_E_Qtu91NLKlbPspodctlC-Yp53oeG2T_FW9kwAx7YJ8pf8BbnMYLrzVnLjdM-TdJXWHWFgn02kCBf6Es3WgcojVj0DxboAYrrTtOIxoz3X1dWidO1KyWXP1HLTam0ntJY1pTqTvWCqAq7xzfGiH8bYypVKbSDULf-9oJObx2rAmPqOTIO9p7ADzLUWRtaXS_uz3Bs9g"/>
+<h1 class="text-xl font-black italic tracking-tighter text-[#eb0000] font-headline uppercase">DONKEY GAMES</h1>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="close-up profile avatar of a cyberpunk gamer with neon lighting highlights on their face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNfxjBpBxUjUgXFXCl14hsTv7_nICYPzJZztM8TeTRKskJtOje3O1Ueg3joYxyzG-J_MwNQ6QEmwEhx03a7V0LJsNMSig-bfNY4vkf934vlizhZO5jmYp7T4Twy_WQtg0pvkqonKYylgm2CZKysKpyqv7m0sYGiXnv-mP0fkjUfyZl6nKqX8hsOF6S-0SFe1Sw13kmE3jB8nR6l9yiF_1mViaONAytg2ckrJR2bPx9g3wP2gJ8uAZO2gkqUWKaPRIbldIeCiZlk28"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto">
+<!-- Hero Search Section -->
+<section class="mb-10">
+<h2 class="text-4xl font-headline font-bold tracking-tight mb-6 leading-none">
+                CHOOSE YOUR <span class="text-primary-dim italic">DOMAIN</span>
+</h2>
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container border-none py-4 pl-12 pr-4 rounded-xl text-on-surface focus:ring-2 focus:ring-primary/20 focus:bg-surface-bright transition-all placeholder:text-on-surface-variant/50" placeholder="Search categories..." type="text"/>
+</div>
+</section>
+<!-- Categories Bento Grid -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Action - Large Featured -->
+<a class="col-span-2 relative overflow-hidden rounded-2xl h-48 group cursor-pointer border-2 border-transparent hover:border-inverse-primary transition-all" href="{{DATA:SCREEN:SCREEN_14}}">
+<img alt="Action Category" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="cinematic close-up of a high-tech robotic warrior in a rain-slicked neon city alleyway, dramatic red and blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFTWJZlmgIubtH76XRDGnInPQFqD8qD1dUMwdVBXOWzi1j6OjPa0csC4mvmsIb6gyhCFzA1b_V3iKLlJ4K0CFSS-aMaX1fuWcuWV3MDxXGREVvUwNzsVAIufTTzgAWd_r7s6t-VBJT24rmFiHSWWFdXHksBNJ-Uk1hqhN6bl2lBwDov0cgPGG8s_qCwwBzGXe7F7YD0UnFXT9uhVn73WVKfayYPjUZlEQrjE44CGNkgATE_ftePrQiqjvz2-Ychd4f5Xm8KkBAYwA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+<div class="absolute bottom-4 left-5">
+<div class="bg-inverse-primary text-on-primary-fixed px-3 py-1 text-[10px] font-bold uppercase tracking-widest mb-2 rounded-md w-fit">Featured</div>
+<h3 class="text-2xl font-headline font-black uppercase italic tracking-tighter">Action</h3>
+<p class="text-on-surface-variant text-xs">Fast-paced adrenaline combat</p>
+</div>
+<div class="absolute top-4 right-4 bg-surface-container/80 backdrop-blur-md p-2 rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="bolt">bolt</span>
+</div>
+</a>
+<!-- Strategy -->
+<div class="relative overflow-hidden rounded-2xl h-56 group cursor-pointer bg-surface-container border border-outline-variant/10">
+<img alt="Strategy Category" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all" data-alt="top-down tactical map view with holographic glowing blue units and red enemy positions on a dark digital grid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnfEu4NhBTEyie8XHrb2IORQ15fHWS7pPYULkZBdnM0U0TJv6tBRcikadmeVJQdWixG_qHW39JoMPphvyyGr7ZRuoasb0cluTRbtINVCIQtjk0TBZS8dDW7FIjUZOnWUopYnuBJsHIovdiLkloGkR_VHH59N_BeBcg63j1b8_rh-LXTeybKYpaCVgAJLGin2qOGVgYB-AYgHUSCwiuqj961oCUTtnPTztp9OHF3x0nYYuFpDjQn-yRa87-rZMkgkYZOjdZdyx4bt0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-lg font-headline font-bold uppercase tracking-tight">Strategy</h3>
+<p class="text-on-surface-variant text-[10px]">Master the battlefield</p>
+</div>
+</div>
+<!-- RPG -->
+<a class="relative overflow-hidden rounded-2xl h-56 group cursor-pointer bg-surface-container border border-outline-variant/10" href="{{DATA:SCREEN:SCREEN_14}}">
+<img alt="Strategy Category" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all" data-alt="top-down tactical map view with holographic glowing blue units and red enemy positions on a dark digital grid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnfEu4NhBTEyie8XHrb2IORQ15fHWS7pPYULkZBdnM0U0TJv6tBRcikadmeVJQdWixG_qHW39JoMPphvyyGr7ZRuoasb0cluTRbtINVCIQtjk0TBZS8dDW7FIjUZOnWUopYnuBJsHIovdiLkloGkR_VHH59N_BeBcg63j1b8_rh-LXTeybKYpaCVgAJLGin2qOGVgYB-AYgHUSCwiuqj961oCUTtnPTztp9OHF3x0nYYuFpDjQn-yRa87-rZMkgkYZOjdZdyx4bt0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-lg font-headline font-bold uppercase tracking-tight">Strategy</h3>
+<p class="text-on-surface-variant text-[10px]">Master the battlefield</p>
+</div>
+</a>
+<!-- Racing -->
+<div class="col-span-2 relative overflow-hidden rounded-2xl h-40 group cursor-pointer border border-outline-variant/10">
+<img alt="Racing Category" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-all duration-500" data-alt="sleek futuristic racing car speeding through a glowing neon tunnel with light streaks and motion blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg8v07r_OXCTUOqcHK8ruXLWd6OPyT8Q1YKhtTYpfCSRnQto27MxaQRSct6_8HUgg7vuYAQ-p7QEIyR1CVRGGaMgSmmZnlvUDB2KYUXnPB1xrcnj_cQ3d2VDzUxQgqZJO40wVdZsYzBVibl0BezE8O9Zm-OIaPyxZKMODQpe9uZFx4i-akBEPVIfVLvzezmY-riUpSRdCwcAUK7ZxaCmYVXq1YPFmmhpPabQ6UPz96fPohNY5csx0yIzD-Gd1r2wRkLmH0BH79LYk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest to-transparent"></div>
+<div class="absolute inset-y-0 left-6 flex flex-col justify-center">
+<h3 class="text-2xl font-headline font-black uppercase italic tracking-tighter">Racing</h3>
+<p class="text-on-surface-variant text-xs">Velocity and precision</p>
+</div>
+<div class="absolute right-6 top-1/2 -translate-y-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 border border-primary/20">
+<span class="material-symbols-outlined text-primary" data-icon="speed">speed</span>
+</div>
+</div>
+<!-- Puzzle -->
+<a class="relative overflow-hidden rounded-2xl h-56 group cursor-pointer bg-surface-container border border-outline-variant/10" href="{{DATA:SCREEN:SCREEN_14}}">
+<img alt="RPG Category" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all" data-alt="mystical dark fantasy landscape with a glowing crimson crystal floating above a stone altar in a foggy forest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo2hW65Q7BZfODh49xUxKchF-eTP-JWVUhhBcZ1PRAHbJeSG93RME4dMW5gCfS34f8F-NVy_g4g8VmPctJKdVTQSITgReT_M4axbkWF4kNd3X8budfb2vO7QAgNSgRn4tq5A4bRwEbdfkdkIjmgGpH47_R6aHSxIq9cz47e7yW9nm6nQC-Qr4S49n3EVl-0GziiEXuefX73NBcAuekWt4OJq6jHdEgXjxucmQ3_Vrc_BLMV8DtsGul9DkMW3Jri_u8xuVLF6pn38I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-lg font-headline font-bold uppercase tracking-tight">RPG</h3>
+<p class="text-on-surface-variant text-[10px]">Epic journeys await</p>
+</div>
+</a>
+<!-- Arcade -->
+<div class="relative overflow-hidden rounded-2xl h-44 group cursor-pointer bg-surface-container-low border border-outline-variant/10">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-tertiary/10 to-transparent"></div>
+<div class="p-6 h-full flex flex-col justify-between">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="sports_esports">sports_esports</span>
+<div>
+<h3 class="text-lg font-headline font-bold uppercase tracking-tight">Arcade</h3>
+<p class="text-on-surface-variant text-[10px]">Pure classic fun</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Tags -->
+<section class="mt-12">
+<h4 class="text-on-surface-variant font-label text-[10px] uppercase tracking-widest mb-4">Trending Quests</h4>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 bg-surface-container rounded-full text-xs font-bold border border-outline-variant/10 hover:bg-surface-bright transition-colors">#Cyberpunk</button>
+<button class="px-4 py-2 bg-surface-container rounded-full text-xs font-bold border border-outline-variant/10 hover:bg-surface-bright transition-colors">#Retro</button>
+<button class="px-4 py-2 bg-surface-container rounded-full text-xs font-bold border border-outline-variant/10 hover:bg-surface-bright transition-colors">#Multiplayer</button>
+<button class="px-4 py-2 bg-surface-container rounded-full text-xs font-bold border border-outline-variant/10 hover:bg-surface-bright transition-colors">#Speedrun</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#0e0e0e]/80 backdrop-blur-xl rounded-t-3xl border-t border-[#484847]/15 shadow-[0_-10px_40px_rgba(0,0,0,0.6)]">
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-5 py-2 hover:text-white transition-transform active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_14}}">
+<span class="material-symbols-outlined" data-icon="sports_esports">sports_esports</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Arena</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#ff8e7d] text-[#650000] rounded-xl px-5 py-2 shadow-[0_0_15px_rgba(255,142,125,0.4)] active:scale-90 transition-transform duration-200" href="{{DATA:SCREEN:SCREEN_13}}">
+<span class="material-symbols-outlined" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Categories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-5 py-2 hover:text-white transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Quest</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-5 py-2 hover:text-white transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
